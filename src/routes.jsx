@@ -8,7 +8,7 @@
 
 // TODO (Part 1): bring in what you need from react-router to define
 //   routes. Docs: https://reactrouter.com/start/declarative/routing
-import { createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter, RouterProvider, Routes, Route } from "react-router-dom";
 // TODO (Part 2): bring in the Navbar component
 import { Navbar } from "./components/Navbar";
 // TODO (Part 1): bring in the Home page
@@ -25,7 +25,7 @@ function AppRoutes() {
     <>
       {/* TODO (Part 2): render the navbar here, above your routes,
           so it shows no matter which page is active */}
-
+  <Navbar />
       {/*
         TODO: define your routes below.
 
