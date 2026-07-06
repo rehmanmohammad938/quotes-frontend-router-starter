@@ -8,11 +8,17 @@
 
 // TODO (Part 1): bring in what you need from react-router to define
 //   routes. Docs: https://reactrouter.com/start/declarative/routing
+import { createBrowserRouter } from "react-router-dom";
 // TODO (Part 2): bring in the Navbar component
+import { Navbar } from "./components/Navbar";
 // TODO (Part 1): bring in the Home page
+import { Home } from "./pages/Home";
 // TODO (Part 3): bring in the QuoteDetail page
+import { QuoteDetail } from "./pages/QuoteDetail";
 // TODO (Part 4): bring in the AddQuote page
+import { AddQuote } from "./pages/AddQuote";
 // TODO (Part 5): bring in the NotFound page
+import { NotFound } from "./pages/NotFound";
 
 function AppRoutes() {
   return (
