@@ -8,22 +8,25 @@
 // That's the difference between useNavigate and <Link>.
 // ============================================================
 
-import { useState } from 'react'
+import { use, useState } from 'react'
 
 // TODO (Part 4): bring in the hook that lets you navigate from code,
 //   not just from a link click. Docs:
 //   https://reactrouter.com/start/declarative/navigating#usenavigate
+import { useNavigate } from 'react-router'
 
 function AddQuote() {
   const [text, setText] = useState('')
   const [author, setAuthor] = useState('')
 
   // TODO (Part 4): get the navigate function from that hook
+  const navigate = useNavigate();
 
   function handleSubmit(e) {
     e.preventDefault()
 
     // TODO (Part 4): send the user back to the home page after submit
+    navigate('/');
   }
 
   return (
