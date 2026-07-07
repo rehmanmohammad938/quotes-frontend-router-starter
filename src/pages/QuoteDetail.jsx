@@ -11,7 +11,7 @@
 //   https://reactrouter.com/start/declarative/url-values#useparams
 // TODO (Part 3): bring in the quotes data
 
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link } from "react-router";
 import { quotes } from "../data/quotes";
 
 function QuoteDetail() {
@@ -31,6 +31,7 @@ function QuoteDetail() {
       return (
         <div className="app">
           <p>No quote found.</p>
+          <p className="empty">There's no quote with id {id}</p>
           <Link to="/">Back to all quotes</Link>
         </div>
       );
@@ -41,10 +42,10 @@ function QuoteDetail() {
       {/* TODO (Part 3): render the quote's text and author */}
       <div className="card">
         <p className="quote-text">{quote.text}</p>
-        <p className="quote-author">{quote.author}</p>
+        <p className="quote-author">-{quote.author}</p>
       </div>
       {/* TODO (Part 3): a link back to the home page */}
-      <Link to="/" className="back-link">Back to all quotes</Link>
+      <Link to="/">Back to all quotes</Link>
     </div>
   );
 }
