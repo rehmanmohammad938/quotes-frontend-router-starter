@@ -10,15 +10,15 @@
 //   routes. Docs: https://reactrouter.com/start/declarative/routing
 import { Routes, Route } from "react-router";
 // TODO (Part 2): bring in the Navbar component
-import { Navbar } from "./components/Navbar.jsx";
+import  Navbar  from "./components/Navbar.jsx";
 // TODO (Part 1): bring in the Home page
-import { Home } from "./pages/Home.jsx";
+import  Home from "./pages/Home.jsx";
 // TODO (Part 3): bring in the QuoteDetail page
-import { QuoteDetail } from "./pages/QuoteDetail.jsx";
+import QuoteDetail from "./pages/QuoteDetail.jsx";
 // TODO (Part 4): bring in the AddQuote page
-import { AddQuote } from "./pages/AddQuote.jsx";
+import AddQuote from "./pages/AddQuote.jsx";
 // TODO (Part 5): bring in the NotFound page
-import { NotFound } from "./pages/NotFound.jsx";
+import NotFound from "./pages/NotFound.jsx";
 
 function AppRoutes() {
   return (
