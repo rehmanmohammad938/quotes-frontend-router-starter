@@ -25,7 +25,6 @@ function AppRoutes() {
     <>
       {/* TODO (Part 2): render the navbar here, above your routes,
           so it shows no matter which page is active */}
-  <Navbar />
       {/*
         TODO: define your routes below.
 
@@ -44,6 +43,10 @@ function AppRoutes() {
 
         Docs: https://reactrouter.com/start/declarative/routing
       */}
+      <Routes>
+        <Route path="/qutoes/:id" element={<QuoteDetail />}></Route> 
+
+      </Routes>
     </>
   )
 }

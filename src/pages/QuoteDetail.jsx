@@ -11,26 +11,42 @@
 //   https://reactrouter.com/start/declarative/url-values#useparams
 // TODO (Part 3): bring in the quotes data
 
+import { useParams, Link } from "react-router-dom";
+import { quotes } from "../data/quotes";
+
 function QuoteDetail() {
   // TODO (Part 3): read the id out of the URL using the params hook.
   //
   // Careful: that hook always gives you the id as a STRING, but each
   // quote's id in data/quotes.js is a NUMBER. Comparing a string to a
   // number directly will never match — convert one side before comparing.
-
+  const { id } = useParams();
   // TODO (Part 3): find the quote in the array whose id matches.
-
+  const quote = quotes.find(q => q.id === Number(id));
   // TODO (Part 3): handle the "not found" case —
   //   if no quote matches (someone visits /quotes/999), render a
   //   short message instead of crashing. Don't assume a match exists
   //   before reading its text or author.
+  if (!quote) {
+      return (
+        <div className="app">
+          <p>No quote found.</p>
+          <Link to="/">Back to all quotes</Link>
+        </div>
+      );
+  }
 
   return (
     <div className="app">
       {/* TODO (Part 3): render the quote's text and author */}
+      <div className="card">
+        <p className="quote-text">{quote.text}</p>
+        <p className="quote-author">{quote.author}</p>
+      </div>
       {/* TODO (Part 3): a link back to the home page */}
+      <Link to="/" className="back-link">Back to all quotes</Link>
     </div>
-  )
+  );
 }
 
 export default QuoteDetail

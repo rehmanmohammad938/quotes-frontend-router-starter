@@ -117,11 +117,11 @@ button:hover {
 .navbar {
   display: flex;
   gap: 16px;
-  padding: 16px 24px;
-  border-bottom: 1px solid var(--border);
+  color: var(--text);
+  text-decoration: none;
 }
 
 .navbar a {
-  color: var(--text);
-  text-decoration: none;
+  color: var(--text-h);
+  font-family: 600;
 }

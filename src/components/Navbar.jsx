@@ -5,7 +5,7 @@
 // routes.jsx — not inside any individual page).
 // ============================================================
 
-import { Link } from "react-router"
+import { NavLink } from "react-router";
 
 // TODO (Part 2): bring in the nav-link component that knows whether
 //   it's the active route. Docs:
@@ -15,9 +15,9 @@ function Navbar() {
   return (
     <nav className="navbar">
       {/* TODO (Part 2): a link to the home page */}
-      <Link to={"/"}>Home</Link>
+      <NavLink to="/" end className={({isActive}) => (isActive ? 'active' : '')}>Home</NavLink>
       {/* TODO (Part 2): a link to the add-quote page */}
-      <Link to={"/add-quote"}>Add Quote</Link>
+      <NavLink to="/quotes/new" className={({ isActive}) => (isActive ? 'active' : '')}>Add Quotes</NavLink>
       {/*
         Hint: this link component takes a function for its class name
         instead of a plain string, so it can style itself differently
