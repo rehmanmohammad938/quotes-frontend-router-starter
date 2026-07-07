@@ -12,7 +12,7 @@
 // TODO (Part 3): bring in the quotes data
 
 import { useParams, Link } from "react-router";
-import { quotes } from "../data/quotes";
+import quotes from "../data/quotes";
 
 function QuoteDetail() {
   // TODO (Part 3): read the id out of the URL using the params hook.

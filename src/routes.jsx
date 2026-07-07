@@ -35,7 +35,7 @@ function AppRoutes() {
           <Route index element={<Home />} />
         {/*Part 3 — QuoteDetail renders at a dynamic path that captures
           an id from the URL (a "path parameter").*/}
-            <Route path="/quotes/new" element={<AddQuote />} />
+          <Route path="/quotes/new" element={<AddQuote />} />
         {/*Part 4 — AddQuote renders at a fixed path.*/}
 
         {/*Part 5 — NotFound catches anything that didn't match any
