@@ -44,6 +44,7 @@ function AppRoutes() {
 
         Docs: https://reactrouter.com/start/declarative/routing
       */}
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </>
   )
